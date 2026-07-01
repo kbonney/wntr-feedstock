@@ -38,6 +38,8 @@ requirements:
 test:
   imports:
     - wntr
+  source_files:
+    - wntr/tests/
   requires:
     - pytest
     - {{ pin_compatible('plotly', upper_bound='6.0') }}
@@ -50,8 +52,8 @@ test:
     - rasterio
     - rtree
   commands:
-    - pytest --pyargs wntr.tests.test_network_controls
-    - pytest --pyargs wntr.tests.test_network_valves
+    - pytest wntr/tests/test_network_controls.py
+    - pytest wntr/tests/test_network_valves.py
 
 about:
   home: https://github.com/USEPA/WNTR
