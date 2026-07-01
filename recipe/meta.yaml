@@ -52,8 +52,7 @@ test:
     - rasterio
     - rtree
   commands:
-    - pytest wntr/tests/test_network_controls.py
-    - pytest wntr/tests/test_network_valves.py
+    - pytest wntr/tests/ --ignore=wntr/tests/test_demos.py --ignore=wntr/tests/test_examples.py
 
 about:
   home: https://github.com/USEPA/WNTR
